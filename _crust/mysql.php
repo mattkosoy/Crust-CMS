@@ -235,6 +235,8 @@
 	}
 
 
+/* Add your DB info here */
+
 $db = new ezSQL_mysql($dbuser='', $dbpassword='', $dbname='', $dbhost='localhost');
 
 ?>

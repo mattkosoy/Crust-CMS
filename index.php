@@ -1,20 +1,19 @@
-<?
-if(ereg('crustandbutter', $_SERVER['HTTP_HOST'])){
-	header('Location:http://jonbocksel.info'); 
-}
+<?PHP
 
+/* Hello. Welcome to CRUST */
 
-
+// this is your array of allowed content types. 
 $allowed = array('work', 'photos', 'video', 'friends', 'info');
+
 if(isset($_GET['select']) && in_array($_GET['select'], $allowed)){
 	$type = $_GET['select'];
 } else {
 	$type = 'home';
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
-<head profile="http://gmpg.org/xfn/11">
+<!DOCTYPE html> 
+<html>
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="c/bocksel.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="c/thickbox.css" type="text/css" media="screen" />
@@ -199,10 +198,10 @@ if(count($r)>0){
 			default:
 				if(!empty($i['image']) || $i['image'] != ''){
 					if(ereg('single', $single)){
-						echo '<a href="http://jonbocksel.info/uploads/'.$i['image'].'" title="'.stripslashes($i['title']).'" class="thickbox"><img src="http://jonbocksel.info/uploads/'.$i['image'].'" alt="'.stripslashes($i['title']).'" /></a>';
+						echo '<a href="/uploads/'.$i['image'].'" title="'.stripslashes($i['title']).'" class="thickbox"><img src="/uploads/'.$i['image'].'" alt="'.stripslashes($i['title']).'" /></a>';
 
 					} else {
-						echo '<img src="http://jonbocksel.info/uploads/'.$i['image'].'" alt="'.stripslashes($i['title']).'" />';
+						echo '<img src="/uploads/'.$i['image'].'" alt="'.stripslashes($i['title']).'" />';
 					}
 				}
 				echo '<p>'.nl2br(stripslashes($i['copy'])).'</p>';
@@ -247,7 +246,7 @@ if(count($r)>0){
 					}
 	
 					if(!empty($i['image']) || $i['image'] != ''){
-						echo '<img src="http://jonbocksel.info/uploads/'.$i['image'].'" alt="'.stripslashes($i['title']).'" />';
+						echo '<img src="/uploads/'.$i['image'].'" alt="'.stripslashes($i['title']).'" />';
 					}
 					echo '<p>'.nl2br(stripslashes($i['copy'])).'</p>';
 					if($type == 'home'){
@@ -259,7 +258,7 @@ if(count($r)>0){
 				case 'photos':
 				case 'video':
 						echo '<a href="index.php?select='.$type.'&id='.$i['id'].'">';
-						echo '<img src="http://jonbocksel.info/uploads/'.$i['thumb'].'" alt="'.stripslashes($i['title']).'" title="'.stripslashes($i['title']).'" class="thumb" />';
+						echo '<img src="/uploads/'.$i['thumb'].'" alt="'.stripslashes($i['title']).'" title="'.stripslashes($i['title']).'" class="thumb" />';
 						echo '</a>';
 				break;
 
@@ -287,7 +286,7 @@ if(count($r)>0){
 	</div>
 -->
 
-<div id="footer">&copy; Jon Bocksel <? echo date('Y'); ?></div>
+<div id="footer">&copy; The Swell Co <? echo date('Y'); ?></div>
 
 
 </div>
