@@ -65,10 +65,10 @@ jQuery.fn.defuscate = function( settings ) {
 
 </script>
 
-<title>Jon Bocksel</title>
+<title>CRUST</title>
 </head>
 <body>
-<div id="header"><h1><a href="<? echo $_SERVER['PHP_SELF']; ?>" title="read the latest updates">Jon Bocksel</a></h1></div>
+<div id="header"><h1><a href="<? echo $_SERVER['PHP_SELF']; ?>" title="read the latest updates">CRUST CMS</a></h1></div>
 
 <div id="site" class="clrfix">
 	<div id="menu_column">
@@ -125,7 +125,7 @@ function prev_next($id, $type){
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 function formatDate($val){
 	$arr = explode("-", $val);
-	return date("m/d/y", mktime(0,0,0, $arr[1], $arr[2], $arr[0]));
+	return date("m/d/y", crusttime(0,0,0, $arr[1], $arr[2], $arr[0]));
 }
 
 function paginate($start, $limit=5){
@@ -190,7 +190,7 @@ if(count($r)>0){
 
 	if($single != ''){
 		$i = $r[0];
-		echo '<div class="mk-w"><h2>'.ucwords(stripslashes($i['title'])).'</h2></div>';
+		echo '<div class="crust-w"><h2>'.ucwords(stripslashes($i['title'])).'</h2></div>';
 		echo'	<div id="content_column"> ';
 
 		echo ' <ul class="'.$type.$single.'">'."\n".'<li>';
@@ -212,19 +212,19 @@ if(count($r)>0){
 
 	} else {
 		if($type == "friends" || $type == "info"){
-				echo '<div class="mk-w"><h2>'.ucwords(stripslashes($r[0]['title'])).'</h2></div>';
+				echo '<div class="crust-w"><h2>'.ucwords(stripslashes($r[0]['title'])).'</h2></div>';
 		}
 
 		if($type == "work" || $type == "photos" || $type == "video"){
 			switch($type){
 				case 'work':
-					echo  '<div class="mk-w"><h2>Selected Work</h2></div>';
+					echo  '<div class="crust-w"><h2>Selected Work</h2></div>';
 				break;
 				case 'photos':
-					echo '<div class="mk-w"><h2>Photography</h2></div>';
+					echo '<div class="crust-w"><h2>Photography</h2></div>';
 				break;
 				case 'video':
-					echo '<div class="mk-w"><h2>Video</h2></div>';
+					echo '<div class="crust-w"><h2>Video</h2></div>';
 				break;
 			}
 		}
@@ -281,7 +281,7 @@ if(count($r)>0){
 
 <!--[if IE]>
 	<div id="no_ie">
-		<h2>You're using a Microsoft Web Browser. You might see some "errors". </h2>  
+		<h2>You're using a Microsoft Web Browser. Derple. </h2>  
 		<p><a href="http://getfirefox.com" target="_blank">Firefox</a> works on PCs too.</p>
 	</div>
 -->

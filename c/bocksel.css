@@ -48,8 +48,8 @@ li.no_results { width: 98.5% !important; cursor:default !important; color:#EEE; 
 li.no_results:hover{  background-color:rgba(0, 0, 0, 0.5) !important; cursor:default !important;}
 ul.single li { width: 98.5% !important; height:auto!important; cursor:default !important; padding: 7px 0 0 7px !important; }
 ul.single li:hover{  background-color:rgba(0, 0, 0, 0.5) !important; cursor:default !important;}
-.mk-w { float:left; margin-bottom:7px; width:81%;}
-.mk-w h2{ padding:0 14px; color:#FFFF00;}
+.crust-w { float:left; margin-bottom:7px; width:81%;}
+.crust-w h2{ padding:0 14px; color:#FFFF00;}
 ul.go_back  { float:left; margin: 0 0 0 7px !important; font-size:13px;  } 
 ul.go_back li{ float:left; margin: 0 7px 0 0 ; }
 #tooltip { position: absolute; z-index: 3000; border: 1px solid #111; background-color: #0FC; padding:5px; opacity: 0.85;
